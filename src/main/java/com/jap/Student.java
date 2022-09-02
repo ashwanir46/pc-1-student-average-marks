@@ -39,4 +39,13 @@ public class Student {
     public void setTotalMarks(int totalMarks) {
         this.totalMarks = totalMarks;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", rollNo=" + rollNo +
+                ", totalMarks=" + totalMarks +
+                '}';
+    }
 }
