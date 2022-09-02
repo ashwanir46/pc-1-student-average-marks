@@ -1,8 +1,6 @@
 package com.jap;
 
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class StudentService {
 
@@ -30,15 +28,19 @@ public class StudentService {
     }
 
 
-    public static Set<String> getAllStudentNameInSorted(Set<Student> studentSet){
+    public static Set<String> getAllStudentNameInSorted(Set<Student> studentSet) {
         //Create a TreeSet object
+        Set<String> students = new TreeSet<>();
 
         //Use Iterator object of type <Student> to iterate through the studentSet
+        Iterator<Student> iterator = studentSet.iterator();
 
         //get all the name and add it inside the TreeSet object
-
-      //return the TreeSet object;
-        return null;
+        while (iterator.hasNext()) {
+            students.add(iterator.next().getName());
+        }
+        //return the TreeSet object;
+        return students;
     }
 
     public static Map<String,Integer> calculateAverage(Set<Student> studentSet){
